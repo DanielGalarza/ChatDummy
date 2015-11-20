@@ -22,6 +22,7 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.firebase.ui.FirebaseListAdapter;
 
+import java.util.Random;
 
 
 public class MainActivity extends AppCompatActivity
@@ -32,7 +33,9 @@ public class MainActivity extends AppCompatActivity
     private FirebaseListAdapter mAdapter;
     private EditText mMessageText;
     Button mShootButton;
-    String name = "default";
+    private Random r = new Random();
+    private String name = "User" + r.nextInt(9999); //userID during a chat.
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +99,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    //TEST
     public void createMessages() {
 
         //TEST MESSAGES
